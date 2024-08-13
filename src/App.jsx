@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {" "}
         <AuthContextProvider>
           <div
             id="main-wrapper"
@@ -39,7 +38,7 @@ function App() {
               <Route path="/login" component={Login} />
               <Route path="/new" component={NewProduct} />
             </Switch>
-          </div>{" "}
+          </div>
         </AuthContextProvider>
       </BrowserRouter>
     </div>

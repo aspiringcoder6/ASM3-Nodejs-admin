@@ -46,10 +46,13 @@ export const AuthContextProvider = ({ children }) => {
     const fetchUser = async () => {
       dispatch({ type: "LOGIN_START" });
       try {
-        const response = await fetch("http://localhost:5000/users/session", {
-          method: "GET",
-          credentials: "include",
-        });
+        const response = await fetch(
+          "https://asm3-nodejs-backend.onrender.com/users/session",
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
         const responseData = await response.json();
         if (response.ok) {
           dispatch({ type: "LOGIN_SUCCESS", payload: responseData.user });
